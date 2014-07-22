@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sheeps and Rams</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            #high-score {
+                display: none;
+            }
+            #wrapper {
+                width: 960px;
+                margin: 0 auto;
+            }
+            
+            #output {
+                padding-top: 10px;
+            }
+            
+            #output table, tr,td,th {
+                width:600px;
+                padding: 10px 0px;
+                margin: 0 auto;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            h1, #wrapper {
+                text-align: center;
+            }
+
+            #wrapper ol {
+                text-align: left;
+            }
+
+
+            img {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Sheeps and Rams</h1>
+            <img src="sheep.png"/>
+
+            <h2>Rules:</h2>
+            <ol>
+                <li>The computer selects a four digit number, all four digits are <strong>different</strong>. </li>
+                <li>In the current implementation a number may <strong>not</strong> begin with 0.</li>
+                <li>The Sheep column displays the total number of digits you guessed right but are not in the right place.</li>
+                <li>
+                    The Ram column shows all the digits put into their right spots.
+
+                </li>
+                <li>
+                    Play by entering your guess in the box below and click "Check" to validate your entry. You may also click "New" to start another game.
+                </li>
+            </ol>
+            <input type="text" id="inputBox">
+            <button type="submit" id="btn">Check</button>
+
+            <div id="output">
+
+            </div>
+        </div>
+        <script src="scripts/game.js"></script>
+        <script src="scripts/gameMain.js">
+        </script>
+    </body>
+</html> 
