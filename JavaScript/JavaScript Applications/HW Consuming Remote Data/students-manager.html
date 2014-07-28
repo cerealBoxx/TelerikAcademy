@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Student System</title>
+        <script src="scripts/libs/require.js" data-main="scripts/app"></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <form action="" id="student-form">
+            <label for="tb-name">Name:</label>
+            <input type="text" id="name" name='name'>
+            <label for="grade">Grade:</label>
+            <input id="grade" name="grade" type="number" min='1' max='12' />        
+            <button id ="add-student-btn" type="submit">Add Student</button>
+        </form>
+
+        <form action="" id="delete-form">
+            <label for="delete">Student ID:</label>
+            <input type="text" name="delete" id="delete-student-input">
+        <button type="submit">Delete Student</button>
+        </form>
+        <div id="students-display"></div>
+        <script type="text/x-handlebars-template" id="handlebars-template">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                </tr>
+                {{#students}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{grade}}</td>
+                </tr>
+                {{/students}}
+            </table>
+        </script>
+    </body>
+</html>

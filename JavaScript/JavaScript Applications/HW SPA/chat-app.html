@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat SPA</title>
+    <script src="scripts/libs/require.js" data-main="scripts/app"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container">
+    <div id="messages"></div>
+    </div>
+    <div id="input">
+        <form action="" id="input-form">
+            <label for="user">User:</label>
+        <input type="text" name="user">
+            <textarea name="text" id="txt-area" cols="30" rows="10" autofocus>        
+        </textarea>
+        <input type="submit" value="Send" id="send-msg-btn">
+        </form>
+        
+    </div>    
+    
+    
+    <script type="text/x-handlebars-template" id="template">
+        {{#data}}
+        <div class="bubble">
+            <p>{{{text}}}</p>
+            <p class="by">By: {{{by}}}</p>
+        </div>
+        {{/data}}
+    </script>
+</body>
+</html>
